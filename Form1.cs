@@ -37,7 +37,6 @@ namespace BJT_LAb_Project
         public Form1()
         {
             InitializeComponent();
-            InitValues();
         }
 
         void InitValues()
@@ -110,6 +109,7 @@ namespace BJT_LAb_Project
             formPlot = new FormPlot(IcMax,VceMax,Ic,Vce);
             formPlot.Show();
         }
+
         private void AnalyzeBtn_Click(object sender, EventArgs e)
         {
             InitValues();

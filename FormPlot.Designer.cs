@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.plotForm = new ScottPlot.WinForms.FormsPlot();
+            this.plot = new ScottPlot.WinForms.FormsPlot();
             this.SuspendLayout();
             // 
-            // plotForm
+            // plot
             // 
-            this.plotForm.DisplayScale = 0F;
-            this.plotForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plotForm.Location = new System.Drawing.Point(0, 0);
-            this.plotForm.Name = "plotForm";
-            this.plotForm.Size = new System.Drawing.Size(782, 553);
-            this.plotForm.TabIndex = 25;
+            this.plot.DisplayScale = 0F;
+            this.plot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plot.Location = new System.Drawing.Point(0, 0);
+            this.plot.Name = "plot";
+            this.plot.Size = new System.Drawing.Size(782, 553);
+            this.plot.TabIndex = 25;
             // 
             // FormPlot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Controls.Add(this.plotForm);
+            this.Controls.Add(this.plot);
             this.Name = "FormPlot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPlot";
@@ -55,6 +55,6 @@
 
         #endregion
 
-        private ScottPlot.WinForms.FormsPlot plotForm;
+        private ScottPlot.WinForms.FormsPlot plot;
     }
 }
