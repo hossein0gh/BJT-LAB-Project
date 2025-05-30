@@ -62,7 +62,6 @@ namespace BJT_LAb_Project
         void CalculateCollectorParameters()
         {
             Ic = Beta * Ib;
-            IcTxtbox.Text = ((float)Ic).ToString();
         }
 
         void CalculateEmitterParameters()
@@ -73,7 +72,6 @@ namespace BJT_LAb_Project
         void CalculateVce()
         {
             Vce = Vcc - Ic * Rc - Ie * Re;
-            VceTxtbox.Text = ((float)Vce).ToString();
         }
 
         void CalculateMode()
@@ -89,7 +87,7 @@ namespace BJT_LAb_Project
             {
                 mode = Mode.Saturation;
                 Vce = 0.2;
-                Ic = (Vcc - Vce - Ie * Re) / Rc;
+                Ic = (Vcc - Vce) / (Re + Rc);
                 ModeLbl.ForeColor = System.Drawing.Color.Orange;
             }
             else
@@ -98,13 +96,16 @@ namespace BJT_LAb_Project
                 ModeLbl.ForeColor = System.Drawing.Color.Green;
             }
 
+            IcTxtbox.Text = ((float)Ic).ToString();
+            VceTxtbox.Text = ((float)Vce).ToString();
+
             ModeLbl.Text = $"{mode.ToString()} Mode.";
         }
 
         void DrawPlot()
         {
             VceMax = Vcc;
-            IcMax = Vcc/(Rc+Re);
+            IcMax = (Vcc)/(Rc+Re);
 
             formPlot = new FormPlot(IcMax,VceMax,Ic,Vce);
             formPlot.Show();
