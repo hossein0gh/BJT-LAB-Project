@@ -105,7 +105,7 @@ namespace BJT_LAb_Project
         void DrawPlot()
         {
             VceMax = Vcc;
-            IcMax = (Vcc)/(Rc+Re);
+            IcMax = (Vcc-0.2)/(Rc+Re);
 
             formPlot = new FormPlot(IcMax,VceMax,Ic,Vce);
             formPlot.Show();

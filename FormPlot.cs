@@ -16,7 +16,7 @@ namespace BJT_LAb_Project
             ScottPlot.Plottables.LinePlot Loadline = new ScottPlot.Plottables.LinePlot()
             {
                 Start = new Coordinates(vcemax,0),
-                End = new Coordinates(0,icmax),
+                End = new Coordinates(0.2,icmax),
             };
             Loadline.LineWidth = 4;
             Loadline.MarkerColor = ScottPlot.Color.FromColor(System.Drawing.Color.Gray);
